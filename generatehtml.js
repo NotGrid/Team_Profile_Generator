@@ -1,8 +1,8 @@
 function generateHtml(data) {
+    // give each role a card
     function manager(managerData) {
         return `<div class="col">
         <div class="card">
-            <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${managerData.name}</h5>
                 <p class="card-text">${managerData.id}</p>
@@ -18,7 +18,6 @@ function generateHtml(data) {
         for (let i = 0; i < engineerData.length; i++) {
             engineers.push(`<div class="col">
             <div class="card">
-            <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${engineerData[i].name}</h5>
                 <p class="card-text">${engineerData[i].id}</p>
@@ -35,7 +34,6 @@ function generateHtml(data) {
         for (let i = 0; i < internData.length; i++) {
             interns.push(`<div class="col">
             <div class="card">
-            <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${internData[i].name}</h5>
                 <p class="card-text">${internData[i].id}</p>

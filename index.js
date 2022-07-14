@@ -117,7 +117,7 @@ function teamIntern() {
         otherTeamMembers();
     })
 };
-
+// function to generate html file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if(err) {

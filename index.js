@@ -1,7 +1,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const generateHtml = require('./generatehtml');
 let teamArray = [];
+const path = require('path');
 // function to input manager info
 function teamManager() {
     inquirer.prompt([
@@ -47,8 +51,9 @@ function otherTeamMembers() {
         }else if(employeeList === 'Intern') {
             teamIntern();
         }else {
-            console.log(teamArray);
+       
             // generated team function goes here
+            writeToFile('dist/index.html', generateHtml(teamArray));
         }
     });
 };
@@ -76,8 +81,9 @@ function teamEngineer() {
             name: 'github',
             message: 'What is your github?',
         },
-    ]).then((teamMember) => {
-        console.log(teamMember);
+    ]).then(({name, employeeID, email, github}) => {
+        let theEngineer = new Engineer(name, employeeID, email, github);
+        teamArray.push(theEngineer);
         otherTeamMembers();
     })
 };
@@ -105,9 +111,20 @@ function teamIntern() {
             name: 'school',
             message: 'What is your school?',
         },
-    ]).then((teamMember) => {
-        console.log(teamMember);
+    ]).then(({name, employeeID, email, school}) => {
+        let theIntern = new Intern(name, employeeID, email, school);
+        teamArray.push(theIntern);
         otherTeamMembers();
+    })
+};
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if(err) {
+            console.log(err);
+        }else {
+            console.log('Team successfully generated!');
+        }
     })
 };
 teamManager();

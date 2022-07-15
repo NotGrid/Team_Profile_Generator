@@ -8,11 +8,8 @@
   - [Acceptance Criteria](#acceptance-criteria)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -61,7 +58,6 @@ THEN I exit the application, and the HTML is generated
 ### Links
 
 - Github URL: (https://github.com/NotGrid/Team_Profile_Generator)
-- Deployed Site URL: 
 
 ### Built with
 

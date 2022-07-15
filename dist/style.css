@@ -4,4 +4,9 @@ body {
 
 .card {
     background-color: rgb(206, 206, 206);
+    align-items: center;
+}
+
+.card-title {
+    background-color: white;
 }

@@ -22,7 +22,7 @@ function generateHtml(data) {
                 <h5 class="card-title">${engineerData[i].name}</h5>
                 <p class="card-text">${engineerData[i].id}</p>
                 <p class="card-text"><a href="mailto: ${engineerData[i].email}">${engineerData[i].email}</a></p>
-                <p class="card-text"><a href="${engineerData[i].github}" target="_blank">${engineerData[i].github}</a></p>
+                <p class="card-text"><a href="https://www.github.com/${engineerData[i].github}" target="_blank">${engineerData[i].github}</a></p>
             </div>
             </div>
         </div>`)

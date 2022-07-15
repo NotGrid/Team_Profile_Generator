@@ -6,7 +6,7 @@ function generateHtml(data) {
             <div class="card-body">
                 <h5 class="card-title">${managerData.name}</h5>
                 <p class="card-text">${managerData.id}</p>
-                <p class="card-text">${managerData.email}</p>
+                <p class="card-text"><a href="mailto: ${managerData.email}">${managerData.email}</a></p>
                 <p class="card-text">${managerData.officeNumber}</p>
             </div>
             </div>
@@ -21,8 +21,8 @@ function generateHtml(data) {
             <div class="card-body">
                 <h5 class="card-title">${engineerData[i].name}</h5>
                 <p class="card-text">${engineerData[i].id}</p>
-                <p class="card-text">${engineerData[i].email}</p>
-                <p class="card-text">${engineerData[i].github}</p>
+                <p class="card-text"><a href="mailto: ${engineerData[i].email}">${engineerData[i].email}</a></p>
+                <p class="card-text"><a href="${engineerData[i].github}" target="_blank">${engineerData[i].github}</a></p>
             </div>
             </div>
         </div>`)
@@ -37,7 +37,7 @@ function generateHtml(data) {
             <div class="card-body">
                 <h5 class="card-title">${internData[i].name}</h5>
                 <p class="card-text">${internData[i].id}</p>
-                <p class="card-text">${internData[i].email}</p>
+                <p class="card-text"><a href="mailto: ${internData[i].email}">${internData[i].email}</a></p>
                 <p class="card-text">${internData[i].school}</p>
             </div>
             </div>
